@@ -23,8 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // Highlight Notice Button
 function highlightNotice() {
   const notice = document.getElementById("notice");
-  notice.style.background = "yellow";
+  notice.style.background = "black";
   notice.style.padding = "10px";
   notice.style.border = "2px solid red";
   notice.style.borderRadius = "8px";
 }
+
