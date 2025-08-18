@@ -1,0 +1,208 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ff6a00, #ee0979, #00c6ff, #0072ff);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  min-height: 100vh;
+  padding: 30px;
+  color: #fff;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 25px;
+  color: #fff;
+  text-shadow: 0 0 15px #ff9a9e, 0 0 25px #fad0c4;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff, 0 0 20px #ff6a00; }
+  to   { text-shadow: 0 0 20px #fff, 0 0 40px #ff6a00; }
+}
+
+/* Subheading */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #ffeaa7;
+}
+
+/* Service List */
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  list-style: none;
+  margin: 30px 0;
+}
+
+ul li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: all 0.4s ease-in-out;
+}
+
+ul li:hover {
+  transform: scale(1.15) rotate(3deg);
+  background: linear-gradient(135deg, #00f260, #0575e6);
+  box-shadow: 0 0 25px #00f260, 0 0 40px #0575e6;
+  cursor: pointer;
+}
+
+/* Important Notice */
+strong {
+  display: block;
+  font-size: 1.6rem;
+  margin-top: 20px;
+  color: #ff7675;
+  text-align: center;
+  text-shadow: 0 0 8px #d63031;
+}
+
+/* Notice box */
+p {
+  background:  rgba(255,255,255,0.1);
+  padding: 20px;
+  border-left: 6px solid #ff7675;
+  border-radius: 15px;
+  margin: 15px auto;
+  font-size: 1.1rem;
+  max-width: 700px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: 0.4s;
+  color: #fff;
+}
+
+/* Button */
+button {
+  display: block;
+  margin: 25px auto;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ee0979, 0 0 30px #ff6a00;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  box-shadow: 0 0 20px #00c6ff, 0 0 40px #0072ff;
+}
+
+/* Make service links look like buttons */
+ul li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+ul li:hover a {
+  color: #fff;
+}
+
+/* New Page Styling */
+.page-container {
+  max-width: 900px;
+  margin: 50px auto;
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.page-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.page-container p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* ===== Back Button Styling ===== */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* image */
+
+/* Image Gallery Fix */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 550px; /* fix size dekar uniform look milega */
+  object-fit: cover; /* image crop ho kar perfect fit hogi */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
